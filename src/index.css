@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Form element styling */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  @apply bg-white border-[#E0E0E0] text-[#1A1A1A] shadow-sm focus:ring-[#2F80ED] focus:border-[#2F80ED] rounded-md;
+}
+
+/* Global scrollbar styling - apply blue scrollbar to all scrollable content */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(47, 128, 237, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #1a67d2, #3db8e5);
+}
+
+/* Red scrollbar for anomalies list */
+.custom-red-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-red-scrollbar::-webkit-scrollbar-track {
+  background: rgba(235, 87, 87, 0.1);
+  border-radius: 10px;
+}
+
+.custom-red-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #EB5757, #f97f7f);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-red-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #d63f3f, #e66a6a);
+}
+
+/* Blue scrollbar for About Application */
+.blue-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.blue-scrollbar::-webkit-scrollbar-track {
+  background: rgba(47, 128, 237, 0.1);
+  border-radius: 10px;
+}
+
+.blue-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blue-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #1a67d2, #3db8e5);
+}
+
+/* 3D effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-x-1:hover {
+  transform: rotateX(2deg) translateZ(10px);
+}
+
+.translate-z-2 {
+  transform: translateZ(2px);
+}
+
+.translate-z-4 {
+  transform: translateZ(4px);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card-hover:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Glass morphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Make range inputs look better */
+input[type="range"] {
+  @apply accent-[#2F80ED];
+  height: 6px;
+  border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #2F80ED;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  @apply text-[#2F80ED] border-[#E0E0E0] rounded focus:ring-[#2F80ED];
+  width: 18px;
+  height: 18px;
+}
