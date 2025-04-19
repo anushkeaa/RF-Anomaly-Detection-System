@@ -23,7 +23,30 @@ This tool is perfect for **cybersecurity professionals**, **TSCM (Technical Surv
 
 Check out the video below to see the RF Anomaly Detection System in action! 🎥
 
-[Watch the demo video here](#)  *(Insert your video link here)*
+
+https://github.com/user-attachments/assets/29ccf836-5dfb-472a-8148-fd51227416fc
+
+
+---
+
+## ⚙️ How It Works
+
+The RF Anomaly Detection System processes radio signals through a multi-stage pipeline:
+
+1. **Signal Capture**: In a fully deployed environment, the system captures raw RF signals via an SDR (Software Defined Radio) device. However, for the current development and demonstration phase, a **synthetic dataset** is used to simulate real-world radio frequency data.
+
+2. **Preprocessing**: The captured (or synthetic) signals undergo preprocessing steps such as **noise reduction**, **normalization**, and **resampling**, ensuring the data is clean and consistent for analysis.
+
+3. **Feature Extraction**: Key characteristics like **spectral density**, **peak frequency**, **bandwidth**, and **temporal patterns** are extracted to represent the signal in a structured form.
+
+4. **Anomaly Detection**: The extracted features are fed into an **unsupervised machine learning model**, primarily the **Isolation Forest algorithm**. This model learns what "normal" looks like and assigns an **anomaly score** to new incoming signals based on their deviation from typical behavior.
+
+5. **Anomaly Classification**: Signals flagged as anomalous are further classified using **feature similarity** and known RF signal profiles. This helps differentiate between benign outliers and potential threats like:
+   - Frequency hopping transmissions  
+   - Burst transmissions  
+   - Unauthorized frequency usage
+
+This architecture allows the system to work effectively **without requiring any prior labeled data**, making it ideal for detecting unknown or evolving RF threats in dynamic environments.
 
 ---
 
@@ -143,4 +166,4 @@ This project is licensed under the MIT License. For more details, check the [LIC
 
 ## 💬 Support
 
-For technical support, feature requests, or bug reports, feel free to open an issue on the GitHub repository or reach out to me directly at [Anushka](mailto:anushkeaa@gmail.com)
+For technical support or bug reports, feel free to open an issue on the GitHub repository or reach out to me directly at [Anushka](mailto:anushkeaa@gmail.com)
